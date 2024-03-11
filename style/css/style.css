@@ -1,0 +1,341 @@
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none !important;}
+
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    cursor: none;
+}
+
+
+
+/********************/
+/*  customm Clases   */
+/********************/
+.underline-0 {
+    text-decoration: 0;
+}
+
+
+
+/********************/
+/*  Text Selector   */
+/********************/
+::selection {
+    color: var(--whiteBG);
+    background: var(--black);
+}
+
+
+
+/********************/
+/*    Scrollbar     */
+/********************/
+::-webkit-scrollbar {
+    width: 6px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(23, 22, 22, 0.771) !important;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/********************/
+/*   Main Colors    */
+/********************/
+:root {
+    --black: #212121;
+    --whiteBG: #f8f8f8;
+}
+
+
+
+/********************/
+/*      Body        */
+/********************/
+body {
+    overflow-x: hidden !important;
+    background-color: var(--whiteBG);
+    /* background-image: url(/images/noiseBg.svg); */
+}
+
+
+
+/********************/
+/*      Header      */
+/********************/
+nav {
+    background: var(--whiteBG) !important;
+}
+.navbar-collapse.show {
+    overflow: hidden !important;
+}
+nav div a img {
+    width: 10rem;
+    height: 4rem;
+}
+
+a.nav-link {
+    font-size: 1.1rem !important;
+    transition: all 1s;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    position: relative;
+}
+
+a.nav-link:hover::before{
+    /* border-bottom: 1px solid var(--black); */
+    width: 100%;
+}
+a.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    border-bottom: 1px solid var(--black);
+    transition: all .3s;
+}
+
+
+/********************/
+/*   Introduction   */
+/********************/
+.introduction {
+    height: 85vh !important;
+}
+
+
+
+
+/********************/
+/*   Contact Form   */
+/********************/
+.form {
+    background-color: var(--black);
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"] {
+    border-color: var(--whiteBG) !important;
+    background-color: transparent;
+    outline: none;
+    color: var(--whiteBG);
+}
+
+textarea {
+    color: var(--whiteBG);
+    background: transparent;
+    outline: none;
+}
+
+.form button i {
+    transition: all .3s;
+    transform: rotate(0deg);
+}
+
+.sendHover {
+    transform: rotate(30deg) !important;
+}
+
+
+
+/********************/
+/*   Sweet Alert    */
+/********************/
+.swal2-popup {
+    background: var(--whiteBG) !important;
+    color: var(--black) !important;
+}
+
+.swal2-confirm {
+    background: var(--black) !important;
+    color: var(--whiteBG) !important;
+    outline: none !important;
+}
+
+
+
+/********************/
+/*      Header      */
+/********************/
+.backgroundFilter{
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(29, 29, 29, 0.622);
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.backgroundFilter-On{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/********************/
+/*   Tablet Form    */
+/********************/
+@media screen and (max-width: 1080px) {
+    #contact {
+        flex-direction: column;
+    }
+
+    #contact .col-6 {
+        width: 100%;
+    }
+}
+
+
+
+/********************/
+/*  Projects Child  */
+/********************/
+@media screen and (max-width: 1050px) {
+    .project {
+        width: 45% !important;
+    }
+}
+
+
+
+/********************/
+/*  Projects Child  */
+/********************/
+@media screen and (max-width: 900px) {
+    #services div:nth-child(2) {
+        flex-wrap: wrap;
+    }
+
+    #services div:nth-child(2) .col-3 {
+        width: 45% !important;
+    }
+}
+
+
+/********************/
+/*      Intro       */
+/********************/
+@media screen and (max-width: 840px) {
+    .intro {
+        flex-direction: column !important;
+        gap: 2.5rem !important;
+    }
+
+    .intro div:nth-child(1) {
+        text-align: center;
+        align-items: center !important;
+    }
+
+    .intro div:nth-child(2) {
+        margin: 0 !important;
+    }
+
+    .d-flex.mt-5.w-100.justify-content-between.pe-5.aos-init {
+        /* display: none !important; */
+        align-items: center !important;
+        flex-direction: column;
+    }
+}
+
+
+/********************/
+/*      Skills      */
+/********************/
+@media screen and (max-width: 765px) {
+
+    #skills div:nth-child(1),
+    div:nth-child(2),
+    div:nth-child(3) {
+        padding-right: 0 !important;
+    }
+
+    .skill {
+        width: 45%;
+    }
+}
+
+
+
+/********************/
+/*     Projects     */
+/********************/
+@media screen and (max-width: 765px) {
+    .project {
+        width: 100% !important;
+    }
+
+    #services div:nth-child(2) .col-3 {
+        width: 100% !important;
+    }
+
+    i.fa-solid.fa-magnifying-glass {
+        margin: 0 1rem;
+    }
+
+    .d-flex.w-100.justify-content-between.aos-init.aos-animate {
+        gap: 1rem;
+        flex-direction: column-reverse;
+    }
+
+    .d-flex.align-items-center.flex-column {
+        margin: auto 0.5rem;
+    }
+
+    .col-6.p-3.aos-init.aos-animate {
+        padding: 0 !important;
+    }
+
+    #form {
+        padding: 1.5rem !important;
+    }
+
+    #contact,
+    #projects,
+    #experience,
+    #skills,
+    #services {
+        padding: 1.3rem !important;
+    }
+
+    nav div a img {
+        width: 6rem;
+        height: 3rem;
+    }
+}
+
+
+
+/********************/
+/*      Header      */
+/********************/
+@media screen and (max-width: 992px)
+{
+    .navbar-collapse{
+        padding-top: 1.5rem;
+    }
+}
